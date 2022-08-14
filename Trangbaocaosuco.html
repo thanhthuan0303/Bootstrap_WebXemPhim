@@ -1,0 +1,235 @@
+<html>
+    <head>
+        <title>NTT & My</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <style>
+            .logo{
+                height: 55px;
+                width: 55px;
+            }
+            body{
+                background-color: black;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .footer{
+                height: 100px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-light fixed-top" style="border-bottom-left-radius: 15px;border-bottom-right-radius: 15px; margin-left: 150px; margin-right: 180px;">
+                <!-- Brand -->
+                <a class="navbar-brand ml-5" href="TrangChu.html">
+                    <img src="images/Logo.png" class="logo" style="border-radius: 50px;" alt="">
+                </a>
+              
+                <!-- Toggler/collapsibe Button -->
+                <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <form class="form-inline mt-1" action="/action_page.php">
+                            <input class="form-control mr-sm-2" style="height: 30px; width: 150px;" type="text" placeholder="Search">
+                            <button class="btn btn-success fas fa-search" style="height: 30px; width: 50px;" type="submit"></button>
+                        </form>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbardrop" data-toggle="dropdown">
+                                Thể Loại
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Anime</a>
+                                <a class="dropdown-item" href="#">Kamen Rider</a>
+                                <a class="dropdown-item" href="#">Super Sentai</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="navbardrop" data-toggle="dropdown">
+                                Năm Phát Hành
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">2021</a>
+                                <a class="dropdown-item" href="#">2020</a>
+                                <a class="dropdown-item" href="#">2019</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Button to Open the Modal -->
+                            <button type="button" class="btn nav-link text-light fas fa-outdent" data-toggle="modal" data-target="#myModal">
+                                Đăng Nhập
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--Phần đăng nhập-->
+        <div class="container">
+            <!-- The Modal -->
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content bg-dark">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h2 class="text-primary">Đăng Nhập</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="mx-auto w-50 pt-3">
+                                <form action="" id="fdangnhap" onsubmit="return KIEMTRA()">
+                                    <div class="input-group form-group ">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-address-book" aria-hidden="true"></i></span>
+                                        </div>
+                                        <input type="text" name="tendn" class="form-control" placeholder="Tên Đăng Nhập" >
+                                    </div>
+                                    <span id="text1" style="color: red;"></span>
+                    
+                                    <div class="input-group form-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                                        </div>
+                                        <input type="password" name="matkhau" class="form-control" placeholder="Mật Khẩu">
+                                    </div>
+                                    <span id="text2" style="color: red;"></span>
+
+                                    <div class="modal-footer justify-content-center">
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <!--BANNER-->
+        <div class="container mt-2">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                    <li data-target="#demo" data-slide-to="1"></li>
+                    <li data-target="#demo" data-slide-to="2"></li>
+                    <li data-target="#demo" data-slide-to="3"></li>
+                </ul>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/banner.jpg" alt="" style="width: 100%;height: 400px;">   
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="images/One-Piece.jpg" alt="" style="width: 100%;height: 400px;">
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="images/kamen_rider_Saber.jpg" alt="" style="width: 100%;height: 400px;">  
+                    </div>
+    
+                    <div class="carousel-item">
+                        <img src="images/kishiryu-sentai-ryuusouger.jpg" alt="" style="width: 100%;height: 400px;">  
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+
+        <!--BODY-->
+        <div class="container m-3">
+            <div class="row ">
+                <div class="col-lg-2">
+                </div>
+
+                <div class="col-lg-8">
+                    <form action="action_page.php" class="text-white" style="margin-left: 200px;">
+
+                        <label for="name">Người gửi:</label>
+                        <input type="text" id="name" name="name" placeholder="Your name.."><br>
+                    
+                        <label for="mail">Email:</label>
+                        <input type="text" id="mail" name="Email" placeholder="Your email"><br>
+                    
+                        <label for="subject">Lời nhắn</label><br>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px; width: 500px;"></textarea><br>
+
+                        <button type="submit" class="btn btn-success mt-3">Gửi</button>
+                    
+                    </form>
+                </div>
+
+                <div class="col-lg-2">
+                </div>
+            </div>
+        </div>
+
+        <!--FOOTER-->
+        <div class="container bg-dark footer">
+            <div class="row">
+                <div class="col-lg-4 ">
+                    <h5>Created by <b class="text-primary">NguyenThanhThuan</b></h5>
+                    <p class="text-warning">hotline: <a href="#"><b>038*******</b></a></p>
+                </div>
+                <div class="col-lg-4 ">
+                    <p class="text-white">12 Trịnh Đình Thảo, phường Hoà Thạnh, <br> quận Tân Phú, TP HCM</p>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="icon-bar">
+                        <a class="active mr-3" href="#"><i class="fab fa-facebook-square fa-white fa-2x"></i></a>  
+                        <a class="active mr-3" href="#"><i class="fab fa-twitter-square fa-white fa-2x"></i></a>
+                        <a class="active mr-3" href="#"><i class="fab fa-instagram fa-white fa-2x"></i></a>
+                        <a class="active mr-3" href="#"><i class="fa fa-envelope fa-white fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Cài đặt đăng nhập-->
+        <script>
+            var f = document.getElementById('fdangnhap');
+            function KIEMTRA(){
+                thanhcong=true;
+                if(f.tendn.value.leghth == 0){
+                    document.getElementById('text1').innerHTML='Vui lòng nhập tên đăng nhập!!!';
+                    thanhcong=false;
+                }
+                if(f.matkhau.value.leghth == 0){
+                    document.getElementById('text2').innerHTML='Vui lòng nhập tên mật khẩu!!!';
+                    thanhcong=false;
+                }
+                if(f.tendn.value != "admin"){
+                    document.getElementById('text1').innerHTML='Tên đăng nhập không đúng!!!';
+                    thanhcong=false;
+                } 
+                if(f.matkhau.value != "admin"){
+                    document.getElementById('text2').innerHTML='Mật khẩu không đúng!!!';
+                    thanhcong=false;
+                }
+                if(thanhcong==true){
+                    alert('Đăng nhập thành công!!!');
+                    return true;
+                }
+                return false;
+            }
+        </script>
+    </body>
+</html>
